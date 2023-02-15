@@ -1,0 +1,153 @@
+<!--Coding Steps:
+Using HTML, Bootstrap, and JavaScript create a single page website that contains the following:
+A Bootstrap styled table representing your choice of data.
+A Bootstrap styled form that allows a user to add a new row to the table when clicking on submit.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boba App</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+    
+    <!--GOAL: add and delete orders from table-->
+
+    <!--card for separating content-->
+    <div class="card">
+        <div class="card-body">
+
+            <!--row 1-->
+            <div class="row">
+                
+                <!--col 1: order name-->
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="order-name">Order Name</label>
+                        <input type="text" class="form-control" id="order-name" placeholder="Order">
+                    </div>
+                </div>
+            </div>
+
+            <!--row 2-->
+            <div class="row">
+
+                <!--col 1: flavor-->
+                <div class="col-sm">
+                    <!--form for styling-->
+                    <div class="form-group">
+                        <!--flavor dropdown/select-->
+                        <label for="flavor">Flavor</label>
+                        <select class="form-control" id="flavor">
+                        <option>Classic Milk Tea</option>
+                        <option>Fruit Tea</option>
+                        <option>Jasmine Milk Tea</option>
+                        <option>Matcha Milk Tea</option>
+                        <option>Oreo Smoothie</option>
+                        <option>Strawberry Milk Tea</option>
+                        <option>Taro Milk Tea</option>
+                        <option>Thai Milk Tea</option>
+                        <option>Tiger Sugar Milk Tea</option>
+                        <option>Vietnamese Coffee</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--col 2: Size-->
+                <div class="col-sm">
+                    <!--form for styling-->
+                    <div class="form-group">
+                        <label for="size">Size</label>
+                        <select class="form-control" id="size">
+                        <option>Small</option>
+                        <option>Medium</option>
+                        <option>Large</option>
+                        </select>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--row 3-->
+            <div class="row">
+
+                <!--col 1: Toppings-->
+                <div class="col-sm">
+                    <!--form for styling-->
+                    <div class="form-group">
+                        <label for="toppings">Toppings</label>
+                        <select class="form-control" id="toppings">
+                        <option>Aloe</option>
+                        <option>Boba</option>
+                        <option>Crystal Boba</option>
+                        <option>Fruit Jelly</option>
+                        <option>Popping Boba</option>
+                        <option>Pudding</option>
+                        <option>Sea Salt Cream</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--col 2: Sweetness-->
+                <div class="col-sm">
+                    <!--form for styling-->
+                    <div class="form-group">
+                        <label for="sweetness">Sweetness</label>
+                        <select class="form-control" id="sweetness">
+                        <option>100%</option>
+                        <option>75%</option>
+                        <option>50%</option>
+                        <option>25%</option>
+                        <option>0%</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--col 3: Ice-->
+                <div class="col-sm">
+                    <!--form for styling-->
+                    <div class="form-group">
+                        <label for="ice">Ice</label>
+                        <select class="form-control" id="ice">
+                        <option>Regular</option>
+                        <option>Light</option>
+                        <option>None</option>
+                        <option>Hot</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+            <!--button to submit/create order-->
+            <div>
+                <button id="add" class="btn btn-primary form-control">Submit</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--table to add/delete orders to/from-->
+    <table id="list" class="table table-dark table-striped">
+        <tr>
+            <!--table headers-->
+            <th>Order Name</th>
+            <th>Flavor</th>
+            <th>Size</th>
+            <th>Toppings</th>
+            <th>Sweetness</th>
+            <th>Ice</th>
+        </tr>
+    </table>
+
+    
+    <script src="Week10CodingAssignment.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
